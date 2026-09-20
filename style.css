@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+}
+
+.app-container {
+  width: 650px;
+  max-width: 95%;
+  margin: 60px auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+#main-heading {
+  text-align: center;
+  margin-bottom: 5px;
+  color: #222;
+}
+
+.subtitle {
+  text-align: center;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 150px 120px;
+  column-gap: 10px;
+  align-items: center;
+}
+
+#todo-input,
+#todo-date {
+  font-size: 15px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+}
+
+#todo-input:focus,
+#todo-date:focus {
+  border-color: #057713;
+}
+
+.btn-todo {
+  background-color: rgb(5, 119, 19);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 13px 5px;
+  cursor: pointer;
+}
+
+.btn-todo:hover {
+  background-color: rgb(3, 92, 14);
+}
+
+#error-message {
+  color: red;
+  font-size: 14px;
+  min-height: 20px;
+}
+
+.todo-header {
+  background-color: #eeeeee;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.todo-row {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.btn-delete {
+  background-color: rgb(150, 20, 20);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 9px;
+  cursor: pointer;
+}
+
+.btn-delete:hover {
+  background-color: rgb(110, 10, 10);
+}
+
+.btn-done {
+  background-color: rgb(30, 130, 60);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 9px;
+  cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+}
+
+#task-count {
+  font-weight: bold;
+}
+
+.btn-clear {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.empty-message {
+  text-align: center;
+  color: #888;
+  padding: 30px;
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+  }
+
+  .todo-header {
+    display: none;
+  }
+
+  .todo-row {
+    margin-top: 10px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+  }
+
+  .buttons {
+    margin-top: 5px;
+  }
+}
